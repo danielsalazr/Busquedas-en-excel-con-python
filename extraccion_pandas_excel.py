@@ -11,7 +11,7 @@ count = 0
 pff = pd.DataFrame()
 
 
-BUSQUEDA = ''
+BUSQUEDA = 'Marqu'
 pa = '^[\d]?.*'+BUSQUEDA+'*.*$'
 po = '^[\d].*BREAK*.*$'
 #pattern  = re.compile(r'^[\d].*BREAK*.*$')
@@ -25,7 +25,7 @@ lista = []
 cantidad = []
 
 direccion = 'C:/Users/dsalazar/Desktop/Friogan Villavicencio Daniel S/Solicitudes de material'
-direccion =  'C:/Users/dsalazar/Desktop/solicitudes arrancador william'
+#direccion =  'C:/Users/dsalazar/Desktop/solicitudes arrancador william'
 
 barra_carga.t.start()
 #for filename in os.listdir('C:/Users/danie/Desktop/Solicitudes_de_material'):
@@ -51,6 +51,7 @@ for filename in os.listdir(direccion):
     count += 1
 
 #print(type(pff))
+
 pff.columns =['Codigo', 'Linea', 'Grupo', 'Elemento','Descripcion', 'Unidad', 'basura', 'basura','basura', 'basura']
 pff.dropna(subset =['Descripcion'], inplace=True)
 barra_carga.done = True

@@ -9,7 +9,7 @@ from pandas import ExcelWriter
 count = 0
 pff = pd.DataFrame()
 
-BUSQUEDA = 'hongo'
+BUSQUEDA = 'marqu'
 pa = '^[\d]?.*'+BUSQUEDA+'*.*$'
 po = '^[\d].*BREAK*.*$'
 #pattern  = re.compile(r'^[\d].*BREAK*.*$')
@@ -77,10 +77,10 @@ def writer_xls(fd):
 #Imprimir busqueda personalizada con numero de elementos
 barra_carga.done = True
 sys.stdout.write('\n')
-#print(tabulate(lista , header))
+print(tabulate(lista , header))
 #print(barra_carga.contador)
 
 
 #Imprimir la lista completa de todos los articulos
-print(pff)
+#print(pff)
 #writer_xls(pff)
